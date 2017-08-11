@@ -3,7 +3,7 @@
 
 Desde Codies y PSL Software Girls queremos agradecer tu asistencia a este taller sobre arduino y esperamos sea una experiencia enriquecedora para todas ustedes. 
 
-En este repositorio encontrarás seis ejercicios que desarrollaremos a lo largo de la jornada y podrás consultarlos en cualquier momento luego del taller. Los Talleres que tenemos programados son los siguiente:
+En este repositorio encontrarás seis ejercicios que desarrollaremos a lo largo de la jornada y podrás consultarlos en cualquier momento luego del taller. Los Talleres que tenemos programados son los siguientes:
 
 1. _LED_: Enciende un LED por 1 segundo y luego lo apaga por 1 segundo infinitas veces.
 
