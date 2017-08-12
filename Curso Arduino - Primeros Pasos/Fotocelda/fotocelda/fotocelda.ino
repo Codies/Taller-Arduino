@@ -1,38 +1,36 @@
-int pinLed1 = 2;
+int lightPin = A0;  
+int ledPin1 = 2;
+int ledPin2 = 3;
+int ledPin3 = 4;
+int read = 0;
 
-
-int pinLDR = 0;
-
-int valorLDR = 0;  
- 
-void setup()
-{
-    pinMode(pinLed1, OUTPUT);
-  
-    Serial.begin(9600);
+void setup(){
+    pinMode(ledPin1, OUTPUT);
+    pinMode(ledPin2, OUTPUT);
+    pinMode(ledPin3, OUTPUT);    
 }
- 
-void loop()
-{
+
+void loop(){
+    read = analogRead(lightPin);
   
-  digitalWrite(pinLed1, LOW);
-  digitalWrite(pinLed2, LOW);
-  digitalWrite(pinLed3, LOW);
+    if(read < 300)
+    {
+  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin2, LOW);
+  digitalWrite(ledPin3, LOW);      
+    }
+    else if(read >= 300 && read < 600)
+    {
+  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin2, HIGH);
+  digitalWrite(ledPin3, LOW);
+    }
+    else if(read >= 600)
+    {
+  digitalWrite(ledPin1, HIGH);
+  digitalWrite(ledPin2, HIGH);
+  digitalWrite(ledPin3, HIGH);
+    }
  
-  valorLDR= analogRead(pinLDR);
-  
-  Serial.println(valorLDR); 
-  if(valorLDR > 256)
-  {
-    digitalWrite(pinLed1, HIGH);
-  }
-  if(valorLDR > 512)
-  {
-    digitalWrite(pinLed2, HIGH);
-  }
-  if(valorLDR > 768)
-  {
-    digitalWrite(pinLed3, HIGH);
-  }
- delay(200);
+    delay(100);
 }
